@@ -56,7 +56,7 @@
 				<span>HT:</span>
 				<span>{formatPrice(invoice.total_ht)}</span>
 			</div>
-			{#if !settings.auto_entrepreneur}
+			{#if !settings.self_employed}
 				<div class="flex justify-between">
 					<span>TVA:</span>
 					<span>{formatPrice(invoice.total_tax)}</span>
@@ -71,7 +71,7 @@
 
 	<!-- Footer -->
 	<div class="mt-12 text-center text-xs">
-		{#if settings.auto_entrepreneur}
+		{#if settings.self_employed}
 			<p>TVA non applicable, art. 293 B du CGI</p>
 		{/if}
 		<p class="mt-2">Merci de votre confiance.</p>
